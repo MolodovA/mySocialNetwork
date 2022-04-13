@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/MolodovA/mySocialNetwork.git/static/css/main.f6a0c230.css",
+    "main.js": "/MolodovA/mySocialNetwork.git/static/js/main.0954237c.js",
+    "static/js/739.e3135a37.chunk.js": "/MolodovA/mySocialNetwork.git/static/js/739.e3135a37.chunk.js",
+    "static/css/377.dc22b673.chunk.css": "/MolodovA/mySocialNetwork.git/static/css/377.dc22b673.chunk.css",
+    "static/js/377.e73fa1e2.chunk.js": "/MolodovA/mySocialNetwork.git/static/js/377.e73fa1e2.chunk.js",
+    "static/css/372.b169d90b.chunk.css": "/MolodovA/mySocialNetwork.git/static/css/372.b169d90b.chunk.css",
+    "static/js/372.997ff21e.chunk.js": "/MolodovA/mySocialNetwork.git/static/js/372.997ff21e.chunk.js",
+    "static/js/944.f1a0e509.chunk.js": "/MolodovA/mySocialNetwork.git/static/js/944.f1a0e509.chunk.js",
+    "static/js/986.651d8647.chunk.js": "/MolodovA/mySocialNetwork.git/static/js/986.651d8647.chunk.js",
+    "static/css/69.70bd2354.chunk.css": "/MolodovA/mySocialNetwork.git/static/css/69.70bd2354.chunk.css",
+    "static/js/69.a846d516.chunk.js": "/MolodovA/mySocialNetwork.git/static/js/69.a846d516.chunk.js",
+    "static/js/386.512c32f3.chunk.js": "/MolodovA/mySocialNetwork.git/static/js/386.512c32f3.chunk.js",
+    "static/media/preload.gif": "/MolodovA/mySocialNetwork.git/static/media/preload.f272c64a8096665626b9.gif",
+    "static/media/userAvatar.png": "/MolodovA/mySocialNetwork.git/static/media/userAvatar.e3b5295b8153893ac97f.png",
+    "index.html": "/MolodovA/mySocialNetwork.git/index.html",
+    "main.f6a0c230.css.map": "/MolodovA/mySocialNetwork.git/static/css/main.f6a0c230.css.map",
+    "main.0954237c.js.map": "/MolodovA/mySocialNetwork.git/static/js/main.0954237c.js.map",
+    "739.e3135a37.chunk.js.map": "/MolodovA/mySocialNetwork.git/static/js/739.e3135a37.chunk.js.map",
+    "377.dc22b673.chunk.css.map": "/MolodovA/mySocialNetwork.git/static/css/377.dc22b673.chunk.css.map",
+    "377.e73fa1e2.chunk.js.map": "/MolodovA/mySocialNetwork.git/static/js/377.e73fa1e2.chunk.js.map",
+    "372.b169d90b.chunk.css.map": "/MolodovA/mySocialNetwork.git/static/css/372.b169d90b.chunk.css.map",
+    "372.997ff21e.chunk.js.map": "/MolodovA/mySocialNetwork.git/static/js/372.997ff21e.chunk.js.map",
+    "944.f1a0e509.chunk.js.map": "/MolodovA/mySocialNetwork.git/static/js/944.f1a0e509.chunk.js.map",
+    "986.651d8647.chunk.js.map": "/MolodovA/mySocialNetwork.git/static/js/986.651d8647.chunk.js.map",
+    "69.70bd2354.chunk.css.map": "/MolodovA/mySocialNetwork.git/static/css/69.70bd2354.chunk.css.map",
+    "69.a846d516.chunk.js.map": "/MolodovA/mySocialNetwork.git/static/js/69.a846d516.chunk.js.map",
+    "386.512c32f3.chunk.js.map": "/MolodovA/mySocialNetwork.git/static/js/386.512c32f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6a0c230.css",
+    "static/js/main.0954237c.js"
+  ]
+}
