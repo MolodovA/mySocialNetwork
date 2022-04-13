@@ -1,0 +1,68 @@
+.info {
+  padding: 15px;
+  display: flex;
+  background-color: #FFF;
+}
+
+.info__icon {
+  width: 100%;
+  margin-bottom: 1rem;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+
+.description {
+  padding-left: 10px;
+}
+
+.description__item {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.description__item:last-child {
+  margin-bottom: 0;
+}
+
+.uploadPhotoItem {
+position: relative;
+text-align: center;
+
+}
+
+.uploadPhotoButton {
+  display: inline-flex;
+  min-height: 40px;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #5783BE;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.uploadPhoto {
+  position: absolute;
+  opacity: 0;
+  font-size: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+.info__image {
+  flex: 0 0 250px;
+}
+
+.input {
+  border:none;
+  padding: 0px 10px;
+  border-bottom: 2px solid #497cc7;
+}

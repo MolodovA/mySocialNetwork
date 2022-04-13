@@ -1,0 +1,25 @@
+.post{
+    box-shadow: 0 0 4px black;
+    padding: 10px;
+}
+.Item__block{
+    display: flex;
+    margin-bottom: 10px;
+}
+.Item__icon{
+    width: 50px;
+}
+.Item__icon img{
+    max-width: 100%;
+    object-fit: cover;
+}
+.Item__text{
+    padding: 5px 10px;
+    max-width: 400px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.like{
+    align-self: flex-end;
+
+}
