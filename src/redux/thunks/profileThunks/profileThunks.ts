@@ -7,7 +7,6 @@ import {
 } from 'redux/reducers/profileReducer/profileAC';
 
 export const getUserProfileTC = (userId: number) => async (dispatch: any) => {
-  console.log('USERpROFILE');
   const response = await usersAPI.getProfile(userId);
   dispatch(setUserAC(response.data));
 };
@@ -21,7 +20,6 @@ export const updateStatusTC = (status: string) => async (dispatch: any) => {
   try {
     const response = await profileAPI.updateStatus(status);
     if (response.data.resultCode === ResultCodes.Success) {
-      console.log('STATUS');
       dispatch(changeStatusAC(status));
     }
   } catch (error) {
@@ -29,7 +27,6 @@ export const updateStatusTC = (status: string) => async (dispatch: any) => {
   }
 };
 export const savePhotoTC = (photo: any) => async (dispatch: any) => {
-  console.log('PHOTO');
   const response = await profileAPI.updatePhoto(photo);
   if (response.data.resultCode === ResultCodes.Success) {
     dispatch(savePhotoAC(response.data.data.photos));

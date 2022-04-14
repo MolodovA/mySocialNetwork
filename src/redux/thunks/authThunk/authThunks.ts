@@ -18,7 +18,6 @@ export const getAuthUserData = () => async (dispatch: Dispatch) => {
 export const logoutTC = () => async (dispatch: Dispatch) => {
   const response = await authAPI.logout();
   if (response.data.resultCode === ResultCodes.Success) {
-    console.log('logoutTC');
     dispatch(setUserDataAC('', '', '', false));
   }
 };

@@ -12,6 +12,6 @@ export const getNewsThunkCreater = () => async (dispatch: Dispatch) => {
     dispatch(setAppStatusAC('succeeded'));
     dispatch(getNewsAC(response.data));
   } catch (e) {
-    console.log('error');
+    console.error(e);
   }
 };
