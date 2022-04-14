@@ -24,7 +24,7 @@ export const ProfileStatus = (): any => {
   };
 
   return (
-    <div>
+    <div className={s.status}>
       {!editMode ? (
         <div>
           <span className={s.description__item}> Status:</span>

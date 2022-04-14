@@ -4,6 +4,7 @@ import Button from '@mui/material/Button/Button';
 
 import { MapStatePropsType } from 'components/Profile/ProfileContainer';
 import s from 'components/Profile/ProfileInfo/ProfileInfo.module.scss';
+import { ProfileStatus } from 'components/Profile/ProfileInfo/ProfileStatus';
 
 export const ProfileInfoData = ({
   profile,
@@ -15,6 +16,7 @@ export const ProfileInfoData = ({
   return (
     <ul>
       <li className={s.description__item}>Name: {profile.fullName}</li>
+      <ProfileStatus />
       <li className={s.description__item}>
         About me: {profile.aboutMe ? profile.aboutMe : 'I`m frontend developer'}
       </li>

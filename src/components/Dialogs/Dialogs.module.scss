@@ -1,6 +1,8 @@
 .dialogs {
   padding: 10px 0 0 20px;
-
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
 }
 
 .dialogs__title {
@@ -18,6 +20,9 @@
 .dialogs__column_b {
   border-left: 1px solid #ACCBEE;
   padding: 20px 30px;
+  @media (max-width: 767px) {
+    padding: 0 10px;
+  }
 }
 
 .dialogs__list {
@@ -52,6 +57,15 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+  @media (max-width: 767px) {
+    margin: 0 10px 10px 0;
+    flex: 0 0 40px;
+    height: 40px;
+  }
+  @media (max-width: 480px) {
+    margin: 0  0 10px 0;
+
+  }
 }
 
 .messages__message {

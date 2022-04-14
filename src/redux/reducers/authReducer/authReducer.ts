@@ -1,15 +1,15 @@
 import { AuthActionsType } from 'redux/reducers/authReducer/authAC';
 
 export type AuthInitialStateType = {
-  userId: null | string;
-  email: string | null;
-  login: string | null;
+  userId: string;
+  email: string;
+  login: string;
   isAuth: boolean;
 };
 const authInitialState = {
-  userId: null,
-  email: null,
-  login: null,
+  userId: '',
+  email: '',
+  login: '',
   isAuth: false,
 };
 

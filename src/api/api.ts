@@ -64,35 +64,3 @@ export const newsAPI = {
     return axios.get('https://baconipsum.com/api/?type=all-meat&sentences=8');
   },
 };
-
-/*
-
-export type MeResponseType = {
-    data: {
-        id:string
-        email:string
-        login:string
-    },
-    messages: string[],
-    resultCode: number
-}
-export type LoginResponseType = {
-    data: {
-        userId:string
-    },
-    messages: string[],
-    resultCode: number
-}
-export type ResponseType = {
-    items: userType[]
-    totalCount: number
-    error: string | null
-}
-
-export type FollowUnFollowResponseType = {
-    data: {},
-    messages: string[],
-    fieldsErrors: string[],
-    resultCode: number
-}
-*/

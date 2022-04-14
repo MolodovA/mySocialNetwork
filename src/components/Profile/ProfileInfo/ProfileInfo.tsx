@@ -42,7 +42,6 @@ export const ProfileInfo = ({ profile }: MapStatePropsType): any => {
       </div>
 
       <div className={s.description}>
-        <ProfileStatus />
         {editMode ? (
           <ProfileDataForm profile={profile} setEditMode={setEditMode} />
         ) : (

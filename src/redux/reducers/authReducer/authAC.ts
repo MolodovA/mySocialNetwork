@@ -1,7 +1,7 @@
 export const setUserDataAC = (
-  userId: string | null,
-  email: string | null,
-  login: string | null,
+  userId: string,
+  email: string,
+  login: string,
   isAuth: boolean,
 ) =>
   ({

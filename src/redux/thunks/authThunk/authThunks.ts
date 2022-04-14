@@ -7,7 +7,6 @@ import { setUserDataAC } from 'redux/reducers/authReducer/authAC';
 
 export const getAuthUserData = () => async (dispatch: Dispatch) => {
   dispatch(setAppStatusAC('loading'));
-
   const MeData = await authAPI.me();
   if (MeData.resultCode === ResultCodes.Success) {
     dispatch(setAppStatusAC('succeeded'));
@@ -19,7 +18,8 @@ export const getAuthUserData = () => async (dispatch: Dispatch) => {
 export const logoutTC = () => async (dispatch: Dispatch) => {
   const response = await authAPI.logout();
   if (response.data.resultCode === ResultCodes.Success) {
-    dispatch(setUserDataAC(null, null, null, false));
+    console.log('logoutTC');
+    dispatch(setUserDataAC('', '', '', false));
   }
 };
 
