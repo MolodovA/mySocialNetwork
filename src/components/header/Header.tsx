@@ -34,7 +34,6 @@ export const Header = (): any => {
         <div className={s.login}>
           {isAuth ? (
             <Button variant="contained" onClick={onLogoutButtonClick}>
-              {' '}
               logout
             </Button>
           ) : (

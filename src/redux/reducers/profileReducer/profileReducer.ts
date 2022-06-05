@@ -1,6 +1,7 @@
 import { v1 } from 'uuid';
 
-import user from '../../../assets/images/userAvatar.png';
+// @ts-ignore
+import user from '../../../assets/images/user.svg';
 
 import { PostType, ProfileInitialStateType } from './types';
 

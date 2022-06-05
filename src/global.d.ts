@@ -4,3 +4,4 @@ declare module "*.png" {
 declare module "*.gif" {
     export default "" as string
 }
+

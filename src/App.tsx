@@ -5,9 +5,9 @@ import LinearProgress from '@mui/material/LinearProgress/LinearProgress';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
-import { Preload } from './components/common/Preload/Preload';
-import { Header } from './components/Header/Header';
-import { Sidebar } from './components/Sidebar/Sidebar';
+import { Preload } from './components/common/preload/Preload';
+import { Header } from './components/header/Header';
+import { Sidebar } from './components/sidebar/Sidebar';
 
 import { ProfileContainer } from 'components/Profile/ProfileContainer';
 import { getIsInitialized, getStatusLoading } from 'redux/selectors';
@@ -15,7 +15,7 @@ import { getAuthUserData } from 'redux/thunks';
 
 const Music = lazy(() =>
   // eslint-disable-next-line @typescript-eslint/no-shadow
-  import('./components/Music/Music').then(({ Music }) => ({ default: Music })),
+  import('./components/music/Music').then(({ Music }) => ({ default: Music })),
 );
 
 const DialogsContainer = lazy(() =>
@@ -27,20 +27,20 @@ const DialogsContainer = lazy(() =>
 
 const News = lazy(() =>
   // eslint-disable-next-line @typescript-eslint/no-shadow
-  import('./components/News/News').then(({ News }) => ({ default: News })),
+  import('./components/news/News').then(({ News }) => ({ default: News })),
 );
 
 const Login = lazy(() =>
   // eslint-disable-next-line @typescript-eslint/no-shadow
-  import('./components/Login/Login').then(({ Login }) => ({ default: Login })),
+  import('./components/login/Login').then(({ Login }) => ({ default: Login })),
 );
 const Setting = lazy(() =>
   // eslint-disable-next-line @typescript-eslint/no-shadow
-  import('./components/Setting/Setting').then(({ Setting }) => ({ default: Setting })),
+  import('./components/setting/Setting').then(({ Setting }) => ({ default: Setting })),
 );
 const FindUsers = lazy(() =>
   // eslint-disable-next-line @typescript-eslint/no-shadow
-  import('./components/FindUsers/FindUsers').then(({ FindUsers }) => ({
+  import('./components/users/FindUsers').then(({ FindUsers }) => ({
     default: FindUsers,
   })),
 );
@@ -64,7 +64,7 @@ const App: React.FC = () => {
         <div className="container">
           <Header />
           {status === 'loading' && <LinearProgress />}
-          <div className="page__container">
+          <div className="page__row">
             <div className="page__column">
               <Sidebar />
             </div>

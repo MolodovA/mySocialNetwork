@@ -27,7 +27,9 @@ export const ProfileStatus = (): any => {
     <div className={s.status}>
       {!editMode ? (
         <div>
-          <span className={s.description__item}> Status:</span>
+          <span className={s.description__item}>
+            <span>Status:</span>
+          </span>
           <span onDoubleClick={onActiveModeClick}>{status || 'I`m free'}</span>
         </div>
       ) : (

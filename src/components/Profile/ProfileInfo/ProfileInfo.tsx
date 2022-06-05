@@ -1,9 +1,14 @@
 import React, { ChangeEvent, useState } from 'react';
 
+import IconButton from '@mui/material/IconButton';
 import LinearProgress from '@mui/material/LinearProgress/LinearProgress';
+import { styled } from '@mui/material/styles';
 import { useDispatch } from 'react-redux';
 
-import user from '../../../assets/images/userAvatar.png';
+// @ts-ignore
+import camera from '../../../assets/images/camera.svg';
+// @ts-ignore
+import user from '../../../assets/images/user.svg';
 
 import s from './ProfileInfo.module.scss';
 import { ProfileDataForm } from './profileInfoForm/ProfileInfoForm';
@@ -16,6 +21,11 @@ type ProfileInfoPropsType = {
   profile: ProfileInfoType;
 };
 const firstElementArrayFiles = 0;
+
+const Input = styled('input')({
+  display: 'none',
+});
+
 export const ProfileInfo = ({ profile }: ProfileInfoPropsType): any => {
   const [editMode, setEditMode] = useState(false);
   const dispatch = useDispatch();
@@ -36,10 +46,17 @@ export const ProfileInfo = ({ profile }: ProfileInfoPropsType): any => {
           <img src={profile.photos.large ? profile.photos.large : user} alt="" />
         </div>
         <div className={s.uploadPhotoItem}>
-          <input type="file" className={s.uploadPhoto} />
-          <div onChange={onUploadPhotoChange} className={s.uploadPhotoButton}>
-            change photo
-          </div>
+          <label htmlFor="icon-button-file">
+            <Input accept="image/*" id="icon-button-file" type="file" />
+            <IconButton
+              onChange={onUploadPhotoChange}
+              color="primary"
+              aria-label="upload picture"
+              component="span"
+            >
+              <img src={camera} alt="camera" />
+            </IconButton>
+          </label>
         </div>
       </div>
 

@@ -36,6 +36,7 @@ export const FindUsers = (): any => {
 
   useEffect(() => {
     dispatch(getUsersThunkCreater(data.currentPage, data.pageSize));
+    return () => {};
   }, []);
 
   const onPageChandler = (p: number): void => {

@@ -1,6 +1,23 @@
 .posts {
-  box-shadow: 0 0 3px 0 #000;
+  box-shadow: 0 0 4px #d2e5e8;
   padding: 15px;
+  max-height: 610px;
+  overflow: auto;
+  scrollbar-width: thin;
+
+
+  /* для Chrome/Edge/Safari */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #d2e5e8;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 3px solid #5783BE;
+  }
 }
 
 .posts__title {

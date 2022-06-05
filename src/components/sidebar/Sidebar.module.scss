@@ -7,7 +7,7 @@
     margin-bottom: 15px;
 }
 .item > a{
-    color:#000;
+    color:inherit;
     opacity: 0.8;
     font-size: 1.2rem;
     font-weight: 600;
@@ -15,5 +15,5 @@
 
 
 .item > a.active{
-    color:white;
+    color:#D2E5E8;
 }

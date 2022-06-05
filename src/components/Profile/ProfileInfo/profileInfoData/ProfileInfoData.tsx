@@ -19,22 +19,25 @@ export const ProfileInfoData = ({
   };
   return (
     <ul>
-      <li className={s.description__item}>Name: {profile.fullName}</li>
+      <li className={s.description__item}>
+        <span>Name:</span> {profile.fullName}
+      </li>
       <ProfileStatus />
       <li className={s.description__item}>
-        About me: {profile.aboutMe ? profile.aboutMe : 'I`m frontend developer'}
+        <span>About me</span>:{' '}
+        {profile.aboutMe ? profile.aboutMe : 'I`m frontend developer'}
       </li>
       <li className={s.description__item}>
-        GitHub:{' '}
+        <span>GitHub:</span>
         <a href="/">
           {profile.contacts.github ? profile.contacts.github : 'https://github.com'}
         </a>
       </li>
       <li className={s.description__item}>
-        lookingForAJob: {profile.lookingForAJob ? 'Yes' : 'no'}
+        <span>LookingForAJob:</span> {profile.lookingForAJob ? 'Yes' : 'no'}
       </li>
       <li className={s.description__item}>
-        lookingForAJobDescription:{' '}
+        <span>LookingForAJobDescription:</span>
         {profile.lookingForAJobDescription
           ? profile.lookingForAJobDescription
           : 'frontend developer'}

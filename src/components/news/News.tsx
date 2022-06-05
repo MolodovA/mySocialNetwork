@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import style from './News.module.scss';
 
+import { Title } from 'components/common/title/Title';
 import { getNews } from 'redux/selectors/selectorsNews/selectorsNews';
 import { getNewsThunkCreater } from 'redux/thunks';
 
@@ -20,17 +21,18 @@ export const News = (): any => {
 
   return (
     <div className={style.news}>
-      <h2 className={style.title}>News</h2>
-      {newNews}
-
-      <div className={style.rating}>
-        <Rating
-          name="simple-controlled"
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        />
+      <Title title="News" />
+      <div className={style.newsItem}>
+        {newNews}
+        <div className={style.rating}>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
+        </div>
       </div>
     </div>
   );
