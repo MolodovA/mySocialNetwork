@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/986.651d8647.chunk.js","mappings":"6KAGaA,EAAU,SAACC,GAAD,OAAkC","sources":["components/Setting/Setting.tsx"],"sourcesContent":["import React from 'react';\r\n\r\ntype SettingPropsType = {};\r\nexport const Setting = (props: SettingPropsType): any => <div>Setting</div>;\r\n"],"names":["Setting","props"],"sourceRoot":""}
