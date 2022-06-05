@@ -4,17 +4,19 @@ import LinearProgress from '@mui/material/LinearProgress/LinearProgress';
 import { useDispatch } from 'react-redux';
 
 import user from '../../../assets/images/userAvatar.png';
-import { MapStatePropsType } from '../ProfileContainer';
 
 import s from './ProfileInfo.module.scss';
 import { ProfileDataForm } from './profileInfoForm/ProfileInfoForm';
-import { ProfileStatus } from './ProfileStatus';
 
 import { ProfileInfoData } from 'components/Profile/ProfileInfo/profileInfoData/ProfileInfoData';
+import { ProfileInfoType } from 'redux/reducers/profileReducer/types';
 import { savePhotoTC } from 'redux/thunks/profileThunks/profileThunks';
 
+type ProfileInfoPropsType = {
+  profile: ProfileInfoType;
+};
 const firstElementArrayFiles = 0;
-export const ProfileInfo = ({ profile }: MapStatePropsType): any => {
+export const ProfileInfo = ({ profile }: ProfileInfoPropsType): any => {
   const [editMode, setEditMode] = useState(false);
   const dispatch = useDispatch();
 

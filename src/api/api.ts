@@ -13,10 +13,10 @@ export const usersAPI = {
       .get(`users?page=${currentPage}&count=${pageSize}`)
       .then(res => res.data);
   },
-  follow(userId: string) {
+  follow(userId: number) {
     return instance.post(`follow/${userId}`);
   },
-  unfollow(userId: string) {
+  unfollow(userId: number) {
     return instance.delete(`follow/${userId}`);
   },
 
@@ -29,7 +29,7 @@ export const profileAPI = {
   getProfile(userId: number) {
     return instance.get(`profile/${userId}`);
   },
-  getStatus(userId: string) {
+  getStatus(userId: number) {
     return instance.get(`profile/status/${userId}`);
   },
   updateStatus(status: string) {

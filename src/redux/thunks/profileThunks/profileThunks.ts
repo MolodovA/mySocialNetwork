@@ -11,7 +11,7 @@ export const getUserProfileTC = (userId: number) => async (dispatch: any) => {
   dispatch(setUserAC(response.data));
 };
 
-export const getStatusTC = (userId: string) => async (dispatch: any) => {
+export const getStatusTC = (userId: number) => async (dispatch: any) => {
   const response = await profileAPI.getStatus(userId);
   dispatch(changeStatusAC(response.data));
 };

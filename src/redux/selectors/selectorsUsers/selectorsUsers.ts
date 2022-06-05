@@ -1,7 +1,7 @@
 import { initialStateType } from 'redux/reducers';
 import { AppStateType } from 'redux/store/reduxStore';
 
-export const getFollowingIsProgress = (state: AppStateType): string[] =>
+export const getFollowingIsProgress = (state: AppStateType): number[] =>
   state.findUsersReducer.followingIsProgress;
 export const getData = (state: AppStateType): initialStateType => state.findUsersReducer;
 

@@ -23,7 +23,7 @@ export const getUsersThunkCreater =
     dispatch(setTotalUserCount(response.totalCount));
   };
 
-export const followThunkCreater = (id: string) => async (dispatch: any) => {
+export const followThunkCreater = (id: number) => async (dispatch: any) => {
   dispatch(followProgress(true, id));
   dispatch(setAppStatusAC('loading'));
   const response = await usersAPI.follow(id);
@@ -34,7 +34,7 @@ export const followThunkCreater = (id: string) => async (dispatch: any) => {
   dispatch(followProgress(false, id));
 };
 
-export const unFollowThunkCreater = (id: string) => async (dispatch: any) => {
+export const unFollowThunkCreater = (id: number) => async (dispatch: any) => {
   dispatch(followProgress(true, id));
   dispatch(setAppStatusAC('loading'));
   const response = await usersAPI.unfollow(id);

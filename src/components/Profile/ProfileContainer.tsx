@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { ReactElement, useEffect } from 'react';
 
-import { connect } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
 import { withRouter } from './CustomWithPouter';
 
@@ -15,37 +16,23 @@ import {
 } from 'redux/thunks/profileThunks/profileThunks';
 
 const defaulUserId = 22152;
-class ProfileContainer extends React.Component<any> {
-  componentDidMount(): any {
-    // eslint-disable-next-line react/destructuring-assignment
-    let { userId } = this.props.params;
-    if (!userId) {
-      userId = defaulUserId;
-    }
 
-    // eslint-disable-next-line react/destructuring-assignment
-    this.props.getUserProfileTC(userId);
-    // eslint-disable-next-line react/destructuring-assignment
-    this.props.getStatusTC(userId);
+export const ProfileContainer = (): ReactElement => {
+  const dispatch = useDispatch();
+  const profile = useSelector<AppStateType, ProfileInfoType>(
+    state => state.profileReducer.profileInfo,
+  );
+
+  const params = useParams();
+  let { userId } = params;
+  if (!userId) {
+    userId = defaulUserId.toString();
   }
 
-  render(): any {
-    // eslint-disable-next-line react/destructuring-assignment,react/jsx-props-no-spreading
-    return <Profile profile={this.props.profile} />;
-  }
-}
+  useEffect(() => {
+    dispatch(getUserProfileTC(Number(userId)));
+    dispatch(getStatusTC(Number(userId)));
+  }, []);
 
-export type MapStatePropsType = {
-  profile: ProfileInfoType;
+  return <Profile profile={profile} />;
 };
-
-const mapStateToProps = (state: AppStateType): MapStatePropsType => ({
-  profile: state.profileReducer.profileInfo,
-});
-
-export default connect(mapStateToProps, {
-  savePhotoTC,
-  getStatusTC,
-  updateStatusTC,
-  getUserProfileTC,
-})(withRouter(ProfileContainer));

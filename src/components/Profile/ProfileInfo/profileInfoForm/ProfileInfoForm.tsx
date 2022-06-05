@@ -3,15 +3,17 @@ import React from 'react';
 import Button from '@mui/material/Button/Button';
 import { useDispatch } from 'react-redux';
 
-import { MapStatePropsType } from 'components/Profile/ProfileContainer';
 import s from 'components/Profile/ProfileInfo/ProfileInfo.module.scss';
+import { ProfileInfoType } from 'redux/reducers/profileReducer/types';
 
+type ProfileDataFormType = {
+  profile: ProfileInfoType;
+  setEditMode: (value: boolean) => void;
+};
 export const ProfileDataForm = ({
   profile,
   setEditMode,
-}: MapStatePropsType | any): any => {
-  const dispatch = useDispatch();
-
+}: ProfileDataFormType | any): any => {
   const onGoToEditModeClick = (): void => {
     setEditMode(false);
   };

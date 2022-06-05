@@ -57,26 +57,26 @@ const profileInitialState = {
   newPostText: '',
   status: 'i am dream live in USA',
 };
-const newPost: PostType = {
-  id: v1(),
-  message: '',
-  like: 0,
-  avatar: profileInitialState.profileInfo.photos.large
-    ? profileInitialState.profileInfo.photos.large
-    : user,
-};
 
 export const profileReducer = (
   state: ProfileInitialStateType = profileInitialState,
   action: ProfileActionsType,
 ): ProfileInitialStateType => {
+  const newPost: PostType = {
+    id: v1(),
+    message: '',
+    like: 0,
+    avatar: profileInitialState.profileInfo.photos.large
+      ? profileInitialState.profileInfo.photos.large
+      : user,
+  };
   switch (action.type) {
     case 'PROFILE/ADD_POST':
       newPost.message = action.payload.message;
       return {
         ...state,
-        newPostText: '',
         postsData: [newPost, ...state.postsData],
+        newPostText: '',
       };
     case 'PROFILE/CHANGE_NEW_TEXT':
       return { ...state, newPostText: action.payload.newText };

@@ -3,17 +3,16 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
 import LinearProgress from '@mui/material/LinearProgress/LinearProgress';
 import { useDispatch, useSelector } from 'react-redux';
-import { Route, Routes, useParams } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
+import { Preload } from './components/common/Preload/Preload';
 import { Header } from './components/Header/Header';
-import { Preload } from './components/Preload/Preload';
 import { Sidebar } from './components/Sidebar/Sidebar';
 
-import ProfileContainer from 'components/Profile/ProfileContainer';
+import { ProfileContainer } from 'components/Profile/ProfileContainer';
 import { getIsInitialized, getStatusLoading } from 'redux/selectors';
 import { getAuthUserData } from 'redux/thunks';
 
-// Glinomes17/Bogamol
 const Music = lazy(() =>
   // eslint-disable-next-line @typescript-eslint/no-shadow
   import('./components/Music/Music').then(({ Music }) => ({ default: Music })),

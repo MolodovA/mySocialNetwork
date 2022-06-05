@@ -2,7 +2,7 @@ import { FindUserActionsType } from 'redux/reducers/usersReducer/usersAC';
 
 export type userType = {
   name: string;
-  id: string;
+  id: number;
   followed: boolean;
   status: string;
   uniqueUrlName: null;
@@ -21,7 +21,7 @@ export type initialStateType = {
   totalUsersCount: number;
   currentPage: number;
   isFetching: boolean;
-  followingIsProgress: string[];
+  followingIsProgress: number[];
 };
 const initialState: initialStateType = {
   users: [],

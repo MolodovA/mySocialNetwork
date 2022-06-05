@@ -1,6 +1,7 @@
 .post {
   box-shadow: 0 0 4px black;
   padding: 10px;
+
 }
 
 .Item__block {
@@ -22,6 +23,7 @@
   max-width: 400px;
   font-weight: 500;
   font-size: 1.2rem;
+
   @media (max-width: 767px) {
     font-size: 1rem;
   }

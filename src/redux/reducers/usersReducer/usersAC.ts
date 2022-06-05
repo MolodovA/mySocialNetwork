@@ -1,18 +1,18 @@
 import { userType } from 'redux/reducers/usersReducer/findUsersReducer';
 
-export const followed = (id: string) =>
+export const followed = (id: number) =>
   ({
     type: 'FIND-USER/FOLLOW',
     payload: { id },
   } as const);
 
-export const followProgress = (isFetching: boolean, id: string) =>
+export const followProgress = (isFetching: boolean, id: number) =>
   ({
     type: 'FIND-USER/FOLLOW-IS-PROGRESS',
     payload: { isFetching, id },
   } as const);
 
-export const unfollowed = (id: string) =>
+export const unfollowed = (id: number) =>
   ({
     type: 'FIND-USER/UNFOLLOW',
     payload: { id },

@@ -2,14 +2,18 @@ import React from 'react';
 
 import Button from '@mui/material/Button/Button';
 
-import { MapStatePropsType } from 'components/Profile/ProfileContainer';
 import s from 'components/Profile/ProfileInfo/ProfileInfo.module.scss';
 import { ProfileStatus } from 'components/Profile/ProfileInfo/ProfileStatus';
+import { ProfileInfoType } from 'redux/reducers/profileReducer/types';
 
+type ProfileInfoDataType = {
+  profile: ProfileInfoType;
+  setEditMode: (value: boolean) => void;
+};
 export const ProfileInfoData = ({
   profile,
   setEditMode,
-}: MapStatePropsType | any): any => {
+}: ProfileInfoDataType | any): any => {
   const onGoToEditModeClick = (): void => {
     setEditMode(true);
   };
