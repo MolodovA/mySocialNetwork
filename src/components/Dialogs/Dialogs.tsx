@@ -1,8 +1,6 @@
 import React, { ChangeEvent } from 'react';
 
-import { TextField } from '@mui/material';
 import { Navigate } from 'react-router-dom';
-import { Field } from 'redux-form';
 
 import s from './Dialogs.module.scss';
 import { DialogsType } from './DialogsContainer';
@@ -10,6 +8,7 @@ import { DialogsItem } from './dialogsItem/DialogsItem';
 import { MessageItem } from './messageItem/MessageItem';
 
 import ItemAdd from 'components/common/itemAdd/ItemAdd';
+import { Title } from 'components/common/title/Title';
 
 export const Dialogs = ({
   dialogsPage,
@@ -38,7 +37,7 @@ export const Dialogs = ({
   // ui
   return (
     <div className={s.dialogs}>
-      <h2 className={s.dialogs__title}>Dialogs</h2>
+      <Title title="Dialogs" />
       <div className={s.dialogs__row}>
         <div className={s.dialogs__column}>
           <ul className={s.dialogs__list}>{newDialogsData}</ul>

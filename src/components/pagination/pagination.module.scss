@@ -1,0 +1,19 @@
+.pagination {
+  flex: 0 1 100%;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.currentPage {
+  font-size: 4rem;
+}
+
+.page {
+  font-weight: 700;
+  cursor: pointer;
+  color: #A3DAA5;
+  margin: 0 5px;
+  background-color: transparent;
+}
+

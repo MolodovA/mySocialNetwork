@@ -5,16 +5,9 @@
   }
 }
 
-.dialogs__title {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
 .dialogs__row {
   display: grid;
-  grid-template-columns: 1fr 11fr;
+  grid-template-columns: 2fr 10fr;
 }
 
 .dialogs__column_b {
@@ -52,7 +45,7 @@
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid red;
+  border: 1px solid #d66d6d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +63,7 @@
 
 .messages__message {
   padding: 10px;
-  box-shadow: 0 0 2px 0 blue;
+  box-shadow: 0 0 3px 0 #d2e5e8;
   border-radius: 10px;
   flex: 0 1 320px;
 }

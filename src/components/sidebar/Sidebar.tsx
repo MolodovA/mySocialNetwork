@@ -18,7 +18,7 @@ const Nav = (): any => (
           to="/dialogs"
           className={({ isActive }) => (isActive ? `${s.active}` : '')}
         >
-          Message
+          Messages
         </NavLink>
       </li>
       <li className={s.item}>
