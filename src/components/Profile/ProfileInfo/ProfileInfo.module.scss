@@ -8,6 +8,7 @@
   width: 100%;
   height: 220px;
   background-color: #767070;
+
   img {
     width: 100%;
     object-fit: cover;
@@ -40,7 +41,7 @@
 
 .uploadPhotoItem {
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   right: 45px;
 
   img {
@@ -50,15 +51,7 @@
 }
 
 .uploadPhotoButton {
-  display: inline-flex;
-  min-height: 40px;
-  padding: 0 20px;
-  text-align: center;
-  color: #fff;
-  background-color: #5783BE;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+  background-color: transparent;
 }
 
 .uploadPhoto {
@@ -88,6 +81,6 @@
 
 .input {
   border: none;
-  padding: 0px 10px;
+  padding: 0 10px;
   border-bottom: 2px solid #497cc7;
 }

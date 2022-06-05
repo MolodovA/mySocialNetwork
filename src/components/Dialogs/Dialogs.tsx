@@ -1,36 +1,46 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 
+import { useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
 import s from './Dialogs.module.scss';
-import { DialogsType } from './DialogsContainer';
 import { DialogsItem } from './dialogsItem/DialogsItem';
 import { MessageItem } from './messageItem/MessageItem';
 
 import ItemAdd from 'components/common/itemAdd/ItemAdd';
 import { Title } from 'components/common/title/Title';
+import {
+  createNewMessageAC,
+  DialogsDataType,
+  MessageDataType,
+  sendMessageAC,
+} from 'redux/reducers';
 
-export const Dialogs = ({
-  dialogsPage,
-  newMessageChange,
-  sendNewMessage,
+type DialogsType = {
+  messageData: MessageDataType[];
+  dialogsData: DialogsDataType[];
+  isAuth: boolean;
+};
+export const Dialogs: FC<DialogsType> = ({
+  messageData,
+  dialogsData,
   isAuth,
 }: DialogsType): any => {
   // data
-  const newDialogsData = dialogsPage.dialogsData.map(u => (
+  const dispatch = useDispatch();
+  const newDialogsData = dialogsData.map(u => (
     <DialogsItem key={u.id} id={u.id} name={u.name} />
   ));
-  const newMessageData = dialogsPage.messageData.map(m => (
+  const newMessageData = messageData.map(m => (
     <MessageItem key={m.id} id={m.id} message={m.message} avatar={m.avatar} />
   ));
-  const newMessageBody = dialogsPage.newMessageText;
 
   const onSendNewMessageClick = (): void => {
-    sendNewMessage();
+    dispatch(sendMessageAC());
   };
   const onNewMessageChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
     const body = e.currentTarget.value;
-    newMessageChange(body);
+    dispatch(createNewMessageAC(body));
   };
 
   if (!isAuth) return <Navigate replace to="/Login" />;

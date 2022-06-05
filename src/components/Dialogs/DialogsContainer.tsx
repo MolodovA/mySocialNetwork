@@ -1,35 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
+import { useSelector } from 'react-redux';
 
 import { Dialogs } from './Dialogs';
 
-import { createNewMessageAC, DialogsPageType, sendMessageAC } from 'redux/reducers';
-import { AppStateType } from 'redux/store/reduxStore';
+import { selectIsAuth } from 'redux/selectors/selectIsAuth';
+import { selectDialogsData } from 'redux/selectors/selectorsDialogs/selectDialogsData';
+import { selectMessageData } from 'redux/selectors/selectorsDialogs/selectorMessageData';
 
-type MapStateToProps = {
-  dialogsPage: DialogsPageType;
-  isAuth: boolean;
+export const DialogsContainer: FC = () => {
+  const dialogsData = useSelector(selectDialogsData);
+  const messageData = useSelector(selectMessageData);
+  const isAuth = useSelector(selectIsAuth);
+
+  return <Dialogs dialogsData={dialogsData} messageData={messageData} isAuth={isAuth} />;
 };
-
-type MapDispatchToPropsType = {
-  sendNewMessage: () => void;
-  newMessageChange: (newMessageText: string) => void;
-};
-export type DialogsType = MapStateToProps & MapDispatchToPropsType;
-
-const mapStateToProps = (state: AppStateType): MapStateToProps => ({
-  dialogsPage: state.DialogsReducer,
-  isAuth: state.auth.isAuth,
-});
-const mapDispatchToProps = (dispatch: Dispatch): MapDispatchToPropsType => ({
-  sendNewMessage: () => {
-    // dispatch(sendMessageAC());
-  },
-  newMessageChange: (newMessageText: string) => {
-    // dispatch(createNewMessageAC(newMessageText));
-  },
-});
-
-export const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);

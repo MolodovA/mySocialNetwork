@@ -2,12 +2,12 @@ import { v1 } from 'uuid';
 
 import { DialogsActionsType } from 'redux/reducers/dialogsReducer/dialogsAC';
 
-type MessageDataType = {
+export type MessageDataType = {
   id: string;
   message: string;
   avatar: string;
 };
-type DialogsDataType = {
+export type DialogsDataType = {
   id: string;
   name: string;
 };
